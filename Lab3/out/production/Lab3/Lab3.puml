@@ -1,0 +1,13 @@
+@startuml
+abstract class Creature {
+    -name: String
+    +Creature()
+    +Creature(String name)
+    +setName(String name)
+    +getName()
+}
+interface SimpleInterface{
+    +getName()
+}
+
+@endum
