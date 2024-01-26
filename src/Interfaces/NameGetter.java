@@ -1,5 +1,5 @@
 package Interfaces;
 
-public interface SimpleInterface{
+public interface NameGetter{
     String getName();
 }

@@ -1,3 +1,5 @@
+package Enums;
+
 public enum Intruders {
     FILLE("Филле"), RULLE("Рулле");
     String name;

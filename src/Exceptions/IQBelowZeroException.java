@@ -1,6 +1,6 @@
 package Exceptions;
-public class IQDidntChangeException extends Exception{
-    public IQDidntChangeException(String message){
+public class IQBelowZeroException extends RuntimeException{
+    public IQBelowZeroException(String message){
         super(message);
     }
 }

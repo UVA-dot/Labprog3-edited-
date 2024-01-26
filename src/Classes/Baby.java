@@ -1,26 +1,41 @@
-import Enums.Actions;
-import Interfaces.*;
+package Classes;
 
-public class Baby extends Character implements SimpleInterface, Knowable, Laughable, Believable, Fireable {
-    Baby(String name){
+import Enums.*;
+import Interfaces.*;
+import Abstract.Character;
+
+public class Baby extends Character implements NameGetter, Knowable, Laughable, Believable, Fireable, GetSmartable {
+    public Baby(){
+        this.name = "Малыш";
+        this.age = 7;
+    }
+    public Baby(String name){
         super(name);
-        this.name = name;
+    }
+    public Baby(String name, int age){
+        super(name, age);
     }
     @Override
     public void know(){
-        this.setState(Actions.KNEW.toString() + " чей Бимбо, ");
+        this.setState(Actions.KNEW + " чей Бимбо");
     }
     @Override
     public void laugh(){
-        this.setState(Actions.LAUGH.toString() + ": ");
+        this.setState(String.format("%s", Actions.LAUGH));
+    }
+    public void sendSomeone(String chr, Places place){
+        this.cur_state = String.format("Отправлять %s из %s", chr, place);
+    }
+    public void takeSomeone(Places place, String chr){
+        this.cur_state = String.format("%s достал %s из %s", this.name, chr, place);
     }
     @Override
     public void believe(){
-        this.setState(" ему охотно"+ Actions.BELIEVE.toString() +" ");
+        this.setState(" ему охотно"+ Actions.BELIEVE);
     }
     @Override
     public void fire(){
-        this.setState(Actions.FIRED.toString() + " от желания" + Actions.KNOW.toString() + " как");
+        this.setState(Actions.FIRED + " от желания" + Actions.KNOW + " как");
     }
 
 }

@@ -1,11 +1,13 @@
 @startuml
-'https://plantuml.com/sequence-diagram
+abstract class Creature {
+    -name: String
+    +Creature()
+    +Creature(String name)
+    +setName(String name)
+    +getName()
+}
+interface SimpleInterface{
+    +getName()
+}
 
-autonumber
-
-Alice -> Bob: Authentication Request
-Bob --> Alice: Authentication Response
-
-Alice -> Bob: Another authentication Request
-Alice <-- Bob: another authentication Response
-@enduml
+@endum

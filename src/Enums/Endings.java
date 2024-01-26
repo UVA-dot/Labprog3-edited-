@@ -1,3 +1,5 @@
+package Enums;
+
 public enum Endings{
     Y("у"),
     A("а"),

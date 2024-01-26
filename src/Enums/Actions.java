@@ -1,3 +1,5 @@
+package Enums;
+
 public enum Actions{
     LAUGH(" хохотал"),
     INSPIRE(" внушил"),
@@ -7,9 +9,11 @@ public enum Actions{
     KNEW(" знал"),
     KNOW(" знать"),
     LIE(" лежать"),
-    LET(" предоставить"),
+    LET(" предоставил"),
     DONE(" сделал"),
-    SCARE(" спугнуть");
+    SCARE(" спугнуть"),
+    RUN("побежать"),
+    SLEEP("спит");
     private final String name;
     Actions(String name){
         this.name = name;
